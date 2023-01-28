@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">MyApp</string>
+
+
+
+    <string name="about_text">\t
+        Tato aplikace je  projekt do predmetu AK5PM. Jde o jednoduchou aplikaci na mereni vysledku workoutoveho cviceni.
+        Dava uzivateli info o aktualnim pocasi na outdoor workout.
+    </string>
 </resources>

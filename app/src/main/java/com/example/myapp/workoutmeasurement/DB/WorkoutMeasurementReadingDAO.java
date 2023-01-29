@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 
-import com.example.mojeappka.workoutmeasurement.WorkoutMeasurementReading;
+import com.example.myapp.workoutmeasurement.WorkoutMeasurementReading;
 
 import java.util.LinkedList;
 

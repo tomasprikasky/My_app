@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bodyWeightImg"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="-3dp"
+        app:srcCompat="@drawable/weight_activity" />
+
+    <EditText
+        android:id="@+id/bodyWeightValue"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bodyWeightImg"
+        android:layout_centerHorizontal="true"
+        android:autofillHints="Zadej dosazenou vahu"
+        android:inputType="numberSigned"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnSaveWeight"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bodyWeightValue"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="30dp"
+        android:onClick="onClickSave"
+        android:text="Ulozit" />
+
+    <Button
+        android:id="@+id/btnGenerateWeight"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/bodyWeightValue"
+        android:layout_toRightOf="@+id/btnSaveWeight"
+        android:onClick="onClickGenerate"
+        android:text="Generovat" />
+
+    <TextView
+        android:id="@+id/lastMeasurementText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bodyWeightValue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="10dp"
+        android:text="Posledni zdvih v kg:: " />
+
+    <TextView
+        android:id="@+id/lastMeasurement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/bodyWeightValue"
+        android:layout_toRightOf="@+id/lastMeasurementText"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="10dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/numberOfMeasurementsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lastMeasurement"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Pocet zapisu v denniku v DB: " />
+
+    <TextView
+        android:id="@+id/numberOfMeasurements"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/lastMeasurement"
+        android:layout_toRightOf="@+id/numberOfMeasurementsText"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btnWeightBackHome"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/btnSaveWeight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="118dp"
+        android:text="Zpet" />
+
+</RelativeLayout>

@@ -4,12 +4,16 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapp.workoutmeasurement.DB.WorkoutMeasurementReadingDAO;
@@ -109,6 +113,33 @@ public class WorkoutMeasurementActivity extends AppCompatActivity {
         WorkoutMeasurementReading average = bodyWeight.calcAverage(dataBaseHelper.getAllWeightRecords());
         return average.getBodyWeight();
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.navigation_menu,menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.nav_about:
+                Intent about=new Intent(getApplicationContext(), AboutActivity.class);
+                startActivity(about);
+                finish();
+                break;
+            case R.id.nav_diary:
+                Intent diary=new Intent(getApplicationContext(), WorkoutMeasurementActivity.class);
+                startActivity(diary);
+                finish();
+                break;
+            case R.id.nav_home:
+                Intent home=new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(home);
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 }

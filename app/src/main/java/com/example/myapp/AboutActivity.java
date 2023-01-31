@@ -12,9 +12,6 @@ import android.view.MenuItem;
 import android.widget.ImageButton;
 public class AboutActivity extends AppCompatActivity {
 
-    Toolbar toolbar;
-    ImageButton home;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

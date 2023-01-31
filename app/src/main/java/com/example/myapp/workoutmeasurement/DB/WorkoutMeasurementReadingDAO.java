@@ -20,7 +20,7 @@ public class WorkoutMeasurementReadingDAO extends WorkoutMeasurementHelper {
 
     /* DAO methods */
 
-    //TODO: insert
+
     public long addWeightRecord(WorkoutMeasurementReading weight) {
         SQLiteDatabase writableDatabase = getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -30,7 +30,7 @@ public class WorkoutMeasurementReadingDAO extends WorkoutMeasurementHelper {
         return  writableDatabase.insert(TABLE_NAME, null, values);
     }
 
-    //TODO: selects
+
     public LinkedList<WorkoutMeasurementReading> getAllWeightRecords() {
         SQLiteDatabase readableDatabase = getReadableDatabase();
         LinkedList<WorkoutMeasurementReading> weightRecords = new LinkedList<>();

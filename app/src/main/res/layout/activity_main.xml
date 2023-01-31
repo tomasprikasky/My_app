@@ -15,7 +15,7 @@
         android:layout_marginTop="25dp"
         android:textSize="20dp"
         android:fontFamily="monospace"
-        android:text="Workout dennik" />
+        android:text="Workout denník" />
 
     <ImageView
         android:id="@+id/homePageImg"
@@ -36,9 +36,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/homePageImg"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="120dp"
-        android:text="Zadej zdvihanu vahu" />
+        android:text="Zadej zvednutou váhu" />
 
     <TextView
         android:id="@+id/weightAvgValue"
@@ -49,5 +49,27 @@
         android:layout_marginTop="20dp"
         android:text="" />
 
+    <TextView
+        android:id="@+id/currentTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currentTempText"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="50dp"
+        android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/currentTempText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnBodyWeight"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Venku je °C: "
+        android:textSize="15sp" />
 </RelativeLayout>

@@ -26,13 +26,11 @@ public class WorkoutMeasurementHelper extends SQLiteOpenHelper {
         super(context, "workoutmeasurement.db", null, 1);
     }
 
-    //TODO: execute create database query. It is called the first time a database is accessed
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_WEIGHT_LIFTING);
     }
 
-    //TODO: execute upgrade database query. It is called if the database version number changes
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(DROP_WEIGHT_LIFTING);
